@@ -1,0 +1,118 @@
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <style>
+    :root {
+      --primary-color: hsl(255, 100%, 90%);
+      --primary-color-80: hsl(255, 100%, 80%);
+      --primary-color-60: hsl(255, 100%, 70%);
+      --primary-color-40: hsl(255, 100%, 40%);
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+    }
+
+    header h1 {
+      text-align: center;
+    }
+
+    .menu {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .menu li {
+      text-align: center;
+    }
+
+    .menu a:hover {
+      cursor: pointer;
+      color: var(--primary-color-40);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary-color-60);
+      transition: 0.3s ease-in;
+    }
+
+    #messages {
+      width: min(1000px, 100% - 3rem);
+      margin-inline: auto;
+    }
+
+    .message {
+      padding: 1rem;
+      margin: 0.35rem;
+    }
+
+    .message:nth-child(odd) {
+      background-color: var(--primary-color);
+      border-radius: 1rem;
+    }
+    .message:nth-child(even) {
+      background-color: var(--primary-color-80);
+      border-radius: 1rem;
+    }
+
+    .message-date {
+      font-size: 0.5rem;
+    }
+    .form-new-message {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      max-width: 400px;
+      width: min(1000px, calc(100% - 3rem));
+      margin-inline: auto;
+    }
+
+    /* Estilos para los campos de entrada y etiquetas */
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type='text'],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    /* Estilos para el botón de envío */
+    button {
+      background-color: var(--primary-color-80);
+      transition: 0.3s ease-in;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--primary-color-60);
+    }
+  </style>
+</head>
